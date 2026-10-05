@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Client Portfolio — Next.js Starter
 
-## Getting Started
+A TypeScript starter for a client portfolio using Next.js App Router, React, and Tailwind CSS. The current home page remains the generated Next.js starter screen, providing a foundation for future portfolio content.
 
-First, run the development server:
+**Stack:** Next.js 15 · React 19 · TypeScript · Tailwind CSS 4
 
-```bash
+## Highlights
+
+- Next.js 15.5 App Router project structure.
+- React 19.1 and TypeScript.
+- Tailwind CSS 4 integration through PostCSS.
+- Root layout with Geist and Geist Mono fonts.
+- Development and production build scripts using Turbopack.
+
+## Run locally
+
+Install Node.js and npm, then:
+
+```sh
+git clone https://github.com/itzhoman/Client-portfolio.git
+cd Client-portfolio
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Font setup uses `next/font/google`; initial font fetching may require internet access.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production app |
+| `npm run start` | Serve the production Next.js build |
+| `npm run lint` | Run the configured lint command |
 
-## Learn More
+Run `npm run build` before `npm run start`.
 
-To learn more about Next.js, take a look at the following resources:
+No automated test script is currently defined in `package.json`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Path | Responsibility |
+| --- | --- |
+| `app/page.tsx` | Current generated home page; starting point for portfolio sections |
+| `app/layout.tsx` | Root document, metadata, and font configuration |
+| `app/globals.css` | Global styles and Tailwind setup |
+| `public/` | Starter images and icons |
+| `next.config.ts` | Next.js configuration |
+| `eslint.config.mjs` | ESLint configuration |
 
-## Deploy on Vercel
+## Customize
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Replace `app/page.tsx` with your introduction, selected projects, and contact section.
+- Update the title and description in `app/layout.tsx`.
+- Replace starter assets in `public/` and add routes under `app/` as needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Current scope
+
+This repository is a starter rather than a completed client portfolio. Contact submission, project data, and additional portfolio routes are not implemented. The layout uses `next/font/google`, so font fetching may need network access during development/build.
+
+## Repository
+
+[Source on GitHub](https://github.com/itzhoman/Client-portfolio) · [Hooman Hajimohamadi](https://github.com/itzhoman)
+
+Documentation reviewed against source commit [`e905554`](https://github.com/itzhoman/Client-portfolio/commit/e9055542b01c2a5770e0a7e280acc380367fdf73).
